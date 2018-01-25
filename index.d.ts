@@ -51,6 +51,7 @@ declare namespace Rollbar {
         telemetryScrubber?: TelemetryScrubber;
         scrubTelemetryInputs?: boolean;
         sendConfig?: boolean;
+        transform?: (payload: any) => void;
     }
     export type Callback = (err: MaybeError, response: object) => void;
     export type LogArgument = string | Error | object | Callback | Date | any[];
